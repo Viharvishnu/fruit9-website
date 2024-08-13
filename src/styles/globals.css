@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  /* background-color: #fcfed6; */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body > div > div {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#footer,
+#landing,
+/* .plan-card , */
+#subscriptions {
+  background-color: #fcfed6;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
