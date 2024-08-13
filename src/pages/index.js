@@ -7,7 +7,7 @@ export const getStaticProps = async () => {
   const fruitsData = fruitsDataObj?.fruitsCollection?.items ?? [];
   return {
     props: { fruitsData: fruitsData },
-    revalidate: 60
+    revalidate: 60 * 60 * 6
   };
 };
 
