@@ -14,7 +14,7 @@ const boxData = [
   }
 ];
 
-const rates = [
+export const rates = [
   {
     ogPrice: ["₹ 300", "₹ 540"],
     discPrice: ["₹ 300", "₹ 540"]

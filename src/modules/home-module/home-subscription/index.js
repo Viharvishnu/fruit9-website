@@ -1,6 +1,7 @@
+import { phoneNumber } from "@/common-data";
 import CtaButton from "@/components/cta-button";
 import SubHeading from "@/components/sub-heading";
-import FruitBoxOptions from "@/modules/home-module/home-subscription/fruit-box-options";
+import FruitBoxOptions, { rates } from "@/modules/home-module/home-subscription/fruit-box-options";
 import FruitsCarousal from "@/modules/home-module/home-subscription/fruits-carousal";
 import OrderInputs from "@/modules/home-module/home-subscription/order-inputs";
 import SubscriptionOptions from "@/modules/home-module/home-subscription/subscription-options";
@@ -28,7 +29,9 @@ const HomeSubscription = ({ fruitsData, setFruitBox, fruitBox }) => {
     `I am ${name},
 I would like a ${
       subscription === 0 ? "3 day subscription" : subscription === 1 ? "weekly subscription" : "monthly subscription"
-    } for a ${fruitBox ? "large box" : "small box"} with these fruits:
+    } costing ${rates[subscription].discPrice[fruitBox ? 1 : 0]} for a ${
+      fruitBox ? "large box" : "small box"
+    } with these fruits:
 ${fruits}
 
 My address :
@@ -44,7 +47,7 @@ ${address}`
       <SubscriptionOptions setSubscription={setSubscription} />
       <FruitBoxOptions setFruitBox={setFruitBox} fruitBox={fruitBox} subscription={subscription} />
       <OrderInputs setName={setName} setAddress={setAddress} />
-      <CtaButton href={`https://wa.me/9892901074?text=${encodedMessage}`} onClick={orderClickHandler}>
+      <CtaButton href={`https://wa.me/${phoneNumber}?text=${encodedMessage}`} onClick={orderClickHandler}>
         Order Now
       </CtaButton>
     </div>
