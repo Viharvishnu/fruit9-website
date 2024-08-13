@@ -16,16 +16,16 @@ const boxData = [
 
 export const rates = [
   {
-    ogPrice: ["₹ 300", "₹ 540"],
-    discPrice: ["₹ 300", "₹ 540"]
+    ogPrice: ["₹ 300 / 3 days", "₹ 540 / 3 days"],
+    discPrice: ["₹ 300 / 3 days", "₹ 540 / 3 days"]
   },
   {
-    ogPrice: ["₹ 660", "₹ 1320"],
-    discPrice: ["₹ 510", "₹ 960"]
+    ogPrice: ["₹ 660 / week", "₹ 1320 / week"],
+    discPrice: ["₹ 510 / week", "₹ 960 / week"]
   },
   {
-    ogPrice: ["₹ 2750", "₹ 5500"],
-    discPrice: ["₹ 2125", "₹ 4000"]
+    ogPrice: ["₹ 2750 / month", "₹ 5500 / month"],
+    discPrice: ["₹ 2125 / month", "₹ 4000 / month"]
   }
 ];
 

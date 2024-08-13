@@ -1,22 +1,22 @@
 const subscriptionData = [
   {
     name: "3 day Subscription",
-    cost: "Rs 250",
-    discCost: "Rs 100",
+    small: "Rs 300/-",
+    large: "Rs 540/-",
     duration: "3 days",
     description: "We will send you fresh and healthy fruit boxes for 3 days of a week."
   },
   {
     name: "Weekly Subscription",
-    cost: "Rs 250",
-    discCost: "Rs 100",
+    small: "Rs 510/-",
+    large: "Rs 960/-",
     duration: "6 days",
     description: "We will send you fresh and healthy fruit boxes for 6 days of a week."
   },
   {
     name: "Monthly Subscription",
-    cost: "Rs 250",
-    discCost: "Rs 100",
+    small: "Rs 2125/-",
+    large: "Rs 4000/-",
     duration: "25 days",
     description: "We will send you fresh and healthy fruit boxes for 25 days of a month."
   }
@@ -24,7 +24,7 @@ const subscriptionData = [
 
 const SubscriptionOptions = ({ setSubscription }) => {
   const subscriptionDataMapper = (item, index) => {
-    const { description, name, duration } = item;
+    const { description, name, duration, small, large } = item;
     return (
       <li key={`list-method-${index}`} className="h-auto">
         <label htmlFor={item.name} className="block relative">
@@ -37,10 +37,18 @@ const SubscriptionOptions = ({ setSubscription }) => {
             className="sr-only peer"
           />
           <div className="w-full flex flex-col items-start p-4 cursor-pointer rounded-lg border bg-[#fcfed6] shadow-sm ring-green-400 peer-checked:ring-2 duration-200">
-            <div>
-              <h3 className="leading-none font-medium pr-3 mb-3">{name}</h3>
-              <p className="mt-1 text-sm text-gray-700">{duration}</p>
-              <p className="mt-1 text-sm text-gray-700">{description}</p>
+            <div className="flex flex-col">
+              <h3 className="leading-none font-medium pr-3">{name}</h3>
+              <p className="text-sm text-gray-700 mt-1 mb-2">{duration}</p>
+              <span className="flex items-center my-1 gap-2">
+                <span>Small Box :</span>
+                <span className="bg-green-300 block py-1 px-4 rounded-lg">{small}</span>
+              </span>
+              <span className="flex items-center my-1 gap-2">
+                <span>Large Box :</span>
+                <span className="bg-green-300 block py-1 px-4 rounded-lg">{large}</span>
+              </span>
+              <p className="mt-1 text-gray-700">{description}</p>
             </div>
           </div>
           <div className="absolute top-4 right-4 flex-none flex items-center justify-center w-4 h-4 rounded-full border peer-checked:bg-green-400 text-white peer-checked:text-white duration-200">

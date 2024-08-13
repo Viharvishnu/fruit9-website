@@ -6,11 +6,13 @@ const planDetails = [
   {
     name: "Small Box",
     imgSrc: "/images/box-2.png",
+    rates: "₹ 100 / day",
     feats: ["Compactly assorted", "250 grams", "Juicy and succinct", "Shared by 1-2 people"]
   },
   {
     name: "Large Box",
     imgSrc: "/images/box-1.png",
+    rates: "₹ 180 / day",
     feats: ["Greatly assorted", "450 grams", "Contains greater fruit quantity", "Shared by 2-3 people"]
   }
 ];
@@ -26,7 +28,7 @@ const HomePlans = ({ setFruitBox }) => {
     };
   };
   const planMapper = (box, index) => {
-    const { name, imgSrc, feats } = box;
+    const { name, imgSrc, feats, rates } = box;
     return (
       <div
         key={`fruit-box-${index + 1}`}
@@ -38,6 +40,7 @@ const HomePlans = ({ setFruitBox }) => {
         </div>
         <div className="w-full">
           <span className="text-gray-600 mb-2 block">Features</span>
+          <span className="text-2xl text-green-600 font-bold my-1 block">{rates}</span>
           <ul className="list-disc pl-5">{feats.map(featsMapper)}</ul>
         </div>
         <CtaButton extraClassName="mt-4 w-full text-center" secondary onClick={planHandler(name)}>
