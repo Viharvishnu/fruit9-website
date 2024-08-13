@@ -65,7 +65,7 @@ const FruitsCarousal = ({ setFruits, fruitsData }) => {
     <div className="max-w-4xl w-5/6 flex flex-col gap-2">
       <span>Select your fruits : </span>
       <span className="block text-sm text-green-600">
-        * Guava and Kiwi will be the default fruits in every fruit box.
+        * Pomegranate and Kiwi will be served only upto 30 gm and not more
       </span>
       <span className="block text-sm text-green-600">* Add a minimum of 4 more fruits</span>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-2">{fruitsData.map(fruitsMapper)}</div>

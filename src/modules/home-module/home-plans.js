@@ -6,12 +6,12 @@ const planDetails = [
   {
     name: "Small Box",
     imgSrc: "/images/box-2.png",
-    feats: ["Compactly assorted", "Juicy and succinct", "Shared by 1-2 people"]
+    feats: ["Compactly assorted", "250 grams", "Juicy and succinct", "Shared by 1-2 people"]
   },
   {
     name: "Large Box",
     imgSrc: "/images/box-1.png",
-    feats: ["Greatly assorted", "Contains greater fruit quantity", "Shared by 2-3 people"]
+    feats: ["Greatly assorted", "450 grams", "Contains greater fruit quantity", "Shared by 2-3 people"]
   }
 ];
 
