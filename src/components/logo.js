@@ -1,4 +1,3 @@
-import CtaButton from "@/components/cta-button";
 import Image from "next/image";
 
 const Logo = () => {
@@ -9,7 +8,7 @@ const Logo = () => {
     });
   };
   return (
-    <CtaButton onClick={clickHandler} extraClassName="py-0 px-0 bg-transparent border-0 flex gap-2 items-center">
+    <button onClick={clickHandler} className="flex gap-2 items-center">
       <div className="relative h-12 aspect-square">
         <Image
           alt="Logo | Fruit9"
@@ -20,8 +19,8 @@ const Logo = () => {
           className="w-full h-full object-contain"
         />
       </div>
-      <span className="heading text-3xl font-bold mb-4">Fruit9</span>
-    </CtaButton>
+      <span className="heading text-3xl font-bold">Fruit9</span>
+    </button>
   );
 };
 
