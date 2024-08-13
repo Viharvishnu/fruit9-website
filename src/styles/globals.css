@@ -31,3 +31,7 @@ body > div > div {
     text-wrap: balance;
   }
 }
+
+.Toastify {
+  position: absolute;
+}

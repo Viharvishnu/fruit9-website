@@ -1,5 +1,6 @@
 import { phoneNumber } from "@/common-data";
 import CtaButton from "@/components/cta-button";
+import Logo from "@/components/logo";
 import { Fragment, useState } from "react";
 
 // const navBtns = ["Home", "Plans", "Subscriptions", "About", "Contact Us"];
@@ -46,9 +47,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 px-6 py-3 bg-white z-20 w-full grid place-items-center shadow-lg">
       <div className="flex items-center justify-between w-full">
-        <span className="heading text-4xl font-bold">Logo</span>
+        <Logo />
         <div className="lg:hidden">
-          <button onClick={toggleMenu} className="p-2 text-gray-600 hover:text-purple-700 focus:outline-none">
+          <button onClick={toggleMenu} className="p-2 text-gray-600 hover:text-green-600 focus:outline-none">
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

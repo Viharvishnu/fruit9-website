@@ -1,4 +1,5 @@
 import { phoneNumber } from "@/common-data";
+import Logo from "@/components/logo";
 import Link from "next/link";
 import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp } from "react-icons/bs";
 
@@ -10,10 +11,8 @@ const footerSitemap = [
 ];
 
 const footerContacts = [
-  { text: "Whatsapp", Icon: BsWhatsapp, link: "https://themepanthers.com/wp/nest/d1/" },
-  { text: "Instagram", Icon: BsInstagram, link: "https://themepanthers.com/wp/nest/d1/" },
-  { text: "Twitter", Icon: BsTwitter, link: "https://themepanthers.com/wp/nest/d1/" },
-  { text: "Facebook", Icon: BsFacebook, link: "https://themepanthers.com/wp/nest/d1/" }
+  { text: "Whatsapp", Icon: BsWhatsapp, link: `https://wa.me/${phoneNumber}` },
+  { text: "Instagram", Icon: BsInstagram, link: "https://www.instagram.com/fru.it_9/" }
 ];
 
 const Footer = () => {
@@ -50,15 +49,10 @@ const Footer = () => {
     <footer className="grid place-items-center py-[50px] w-full px-6" id="footer">
       <div className="flex justify-between w-full max-w-7xl flex-col md:flex-row gap-8">
         <div className="flex flex-col max-w-72">
-          <span className="heading text-4xl font-bold mb-4">Logo</span>
-          <p className="mb-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <Logo />
           <span>
             <span>Whatsapp : </span>
-            <span>+91-{phoneNumber}</span>
-          </span>
-          <span>
-            <span>Email : </span>
-            <span>something@gmail.com</span>
+            <span>{phoneNumber}</span>
           </span>
         </div>
         <div className="flex gap-8 md:gap-16 flex-col md:flex-row">

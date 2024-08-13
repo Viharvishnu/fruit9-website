@@ -1,11 +1,22 @@
 const subscriptionData = [
   {
+    name: "3 day Subscription",
+    cost: "Rs 250",
+    discCost: "Rs 100",
+    duration: "3 days",
+    description: "We will send you fresh and healthy fruit boxes for 3 days of a week."
+  },
+  {
     name: "Weekly Subscription",
+    cost: "Rs 250",
+    discCost: "Rs 100",
     duration: "6 days",
     description: "We will send you fresh and healthy fruit boxes for 6 days of a week."
   },
   {
     name: "Monthly Subscription",
+    cost: "Rs 250",
+    discCost: "Rs 100",
     duration: "25 days",
     description: "We will send you fresh and healthy fruit boxes for 25 days of a month."
   }
@@ -18,10 +29,10 @@ const SubscriptionOptions = ({ setSubscription }) => {
       <li key={`list-method-${index}`} className="h-auto">
         <label htmlFor={item.name} className="block relative">
           <input
-            onClick={() => setSubscription(index === 0 ? false : true)}
+            onClick={() => setSubscription(index)}
             id={item.name}
             type="radio"
-            defaultChecked={index == 1 ? true : false}
+            defaultChecked={index == 2 ? true : false}
             name="subscription"
             className="sr-only peer"
           />

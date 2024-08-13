@@ -14,7 +14,22 @@ const boxData = [
   }
 ];
 
-const FruitBoxOptions = ({ setFruitBox, fruitBox }) => {
+const rates = [
+  {
+    ogPrice: ["₹ 300", "₹ 540"],
+    discPrice: ["₹ 300", "₹ 540"]
+  },
+  {
+    ogPrice: ["₹ 660", "₹ 1320"],
+    discPrice: ["₹ 510", "₹ 960"]
+  },
+  {
+    ogPrice: ["₹ 2750", "₹ 5500"],
+    discPrice: ["₹ 2125", "₹ 4000"]
+  }
+];
+
+const FruitBoxOptions = ({ setFruitBox, fruitBox, subscription }) => {
   const boxDataMapper = (item, index) => {
     const { weight, name, servings, imgSrc } = item;
     return (
@@ -43,6 +58,12 @@ const FruitBoxOptions = ({ setFruitBox, fruitBox }) => {
                   className="w-full h-full object-contain"
                 />
               </div>
+              <div className="flex flex-col">
+                {subscription !== 0 && (
+                  <span className="text-xl text-gray-500 line-through">{rates[subscription].ogPrice[index]}</span>
+                )}
+                <span className="text-2xl text-green-600 font-bold">{rates[subscription].discPrice[index]}</span>
+              </div>
               <p className="mt-1 text-sm text-gray-700">{weight}</p>
               <p className="mt-1 text-sm text-gray-700">{servings}</p>
             </div>
@@ -64,7 +85,10 @@ const FruitBoxOptions = ({ setFruitBox, fruitBox }) => {
   };
   return (
     <div className="flex flex-col gap-4 w-full items-center">
-      <span className="w-5/6 max-w-4xl">Select your fruit box :</span>
+      <div className="flex flex-col gap-2 w-5/6 max-w-4xl">
+        <span>Select your fruit box :</span>
+        <span className="block text-sm text-red-500">* Best before 3 hours from delivery</span>
+      </div>
       <ul className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 gap-3 w-5/6 max-w-4xl">{boxData.map(boxDataMapper)}</ul>
     </div>
   );

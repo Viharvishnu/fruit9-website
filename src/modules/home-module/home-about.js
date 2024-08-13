@@ -18,12 +18,11 @@ const HomeAbout = () => {
         />
       </div>
       <p className="text-center sm:w-8/12 w-11/12">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, deserunt. Nam veniam deserunt similique totam
-        dolorum vitae, consectetur doloribus at, nobis dolore harum natus incidunt sequi nesciunt inventore optio, iusto
-        eaque voluptates voluptatum neque praesentium cupiditate vero. Vero facilis a laborum sit amet quos quae sed
-        minima dolore omnis ratione magni, aspernatur dicta? Libero neque, quam cum numquam voluptas doloribus iusto
-        fuga odio cupiditate minima vitae at veritatis aut aspernatur itaque quae quas. Esse, doloremque ducimus rem
-        vitae soluta voluptatem.
+        Fruit9 is a Chennai-based company specializing in delivering fresh fruit boxes containing a delightful
+        assortment of 9 different fruits: Pineapple, Pomegranate, Papaya, Kiwi, Grapes, Banana, Watermelon, Oranges, and
+        Jackfruit. Offering flexible subscription plans, customers can choose from 3-day, 1-week, or 1-month options
+        with the convenience of selecting either a large or small fruit box. With Fruit9, enjoying a variety of seasonal
+        and nutritious fruits has never been easier.
       </p>
       <CtaButton href={`https://wa.me/${phoneNumber}`}>Contact Us</CtaButton>
     </div>

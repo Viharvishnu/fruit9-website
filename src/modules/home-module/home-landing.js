@@ -25,7 +25,7 @@ const HomeLanding = () => {
           <span>Healthy, organic and</span>
           <span>Fresh Fruits</span>
         </h1>
-        <p className="md:text-2xl text-xl text-gray-700 ">The perfect healthy snack box!</p>
+        <p className="md:text-2xl text-xl text-gray-700 ">Unbox the Joy of Fresh, Seasonal Fruits</p>
         <div className="flex sm:flex-row gap-4 flex-col w-full sm:w-fit">
           <CtaButton secondary={true} extraClassName="w-full sm:w-fit text-center" onClick={() => handleClick("plans")}>
             Our Plans
