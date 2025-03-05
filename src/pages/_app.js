@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import FooterCredits from "@/components/footer-credits";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import GoogleAnalytics from "@/components/google-analytics";
 
 const inter = Inter({ subsets: ["latin"] });
 const caveat = Caveat({ subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }) {
       <ToastContainer className="absolute" />
       <Footer />
       <FooterCredits />
+      <GoogleAnalytics />
     </>
   );
 }
